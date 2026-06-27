@@ -421,7 +421,7 @@ export function Dashboard() {
                       <div className="flex items-center gap-4">
                         {project.status === "LIVE" && (
                           <a
-                            href={`http://${project.project_name}.localhost:8000`}
+                            href={`${process.env.NODE_ENV === "development" ? "http" : "https"}://${project.project_name}.${process.env.NEXT_PUBLIC_DOMAIN}`}
                             target="_blank"
                             rel="noreferrer"
                             className="flex items-center gap-1 text-xs font-medium text-indigo-400 hover:text-indigo-300 transition-colors"
