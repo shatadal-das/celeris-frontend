@@ -6,9 +6,9 @@ export default async function Home() {
   const cookieStore = await cookies();
   const token = cookieStore.get("auth_token");
 
-  // if (!token) {
-  //   redirect("/login");
-  // }
+  if (!token) {
+    redirect("/login");
+  }
 
   return (
     <main className="relative flex min-h-screen flex-col items-center justify-start overflow-auto bg-neutral-950 p-4 pt-20">
