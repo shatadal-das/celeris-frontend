@@ -252,21 +252,21 @@ export function Dashboard() {
             )}
           >
             <CardHeader className="space-y-2 pb-2 pt-8 px-8">
-              <div className="flex items-center gap-3">
-                <div className="flex h-9 w-9 items-center justify-center rounded-lg overflow-hidden bg-gradient-to-br from-indigo-500 to-violet-600 shadow-md shadow-indigo-500/20">
+              <div className="grid grid-cols-[1fr_auto] items-center gap-3">
+                <div className="grid size-12 place-items-center rounded-lg overflow-hidden bg-gradient-to-br from-indigo-500 to-violet-600 shadow-md shadow-indigo-500/20">
                   <Image
                     src={"/logo.png"}
                     alt="Celeris Logo"
                     height={36}
                     width={36}
-                    className="h-full w-full"
+                    className="h-full w-full shrink-0"
                   />
                 </div>
                 <div>
                   <CardTitle className="text-base font-semibold tracking-tight text-neutral-50">
                     Deploy Project
                   </CardTitle>
-                  <CardDescription className="text-sm text-neutral-400">
+                  <CardDescription className="text-xs text-neutral-400">
                     Select a React.js repo which doesn't contain any package
                     manager lock file
                   </CardDescription>
@@ -428,7 +428,7 @@ export function Dashboard() {
                         )}
                         <button
                           onClick={() => handleDelete(project.id)}
-                          className="text-neutral-500 hover:text-red-400 transition-colors focus:outline-none"
+                          className="text-neutral-500 hover:text-red-400 transition-colors focus:outline-none cursor-pointer"
                           title="Delete Project"
                         >
                           <Trash2 className="h-4 w-4" />
