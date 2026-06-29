@@ -26,6 +26,7 @@ import {
   Trash2,
   XCircle,
 } from "lucide-react";
+import Image from "next/image";
 import { useEffect, useState } from "react";
 import { toast } from "sonner";
 
@@ -252,26 +253,21 @@ export function Dashboard() {
           >
             <CardHeader className="space-y-2 pb-2 pt-8 px-8">
               <div className="flex items-center gap-3">
-                <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-gradient-to-br from-indigo-500 to-violet-600 shadow-md shadow-indigo-500/20">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    className="h-4.5 w-4.5 text-white"
-                  >
-                    <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
-                  </svg>
+                <div className="flex h-9 w-9 items-center justify-center rounded-lg overflow-hidden bg-gradient-to-br from-indigo-500 to-violet-600 shadow-md shadow-indigo-500/20">
+                  <Image
+                    src={"/logo.png"}
+                    alt="Celeris Logo"
+                    height={36}
+                    width={36}
+                  />
                 </div>
                 <div>
-                  <CardTitle className="text-lg font-semibold tracking-tight text-neutral-50">
+                  <CardTitle className="text-base font-semibold tracking-tight text-neutral-50">
                     Deploy Project
                   </CardTitle>
                   <CardDescription className="text-sm text-neutral-400">
-                    Select a repo to initiate a new build.
+                    Select a React.js repo which doesn't contain any package
+                    manager lock file
                   </CardDescription>
                 </div>
               </div>

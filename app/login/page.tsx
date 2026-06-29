@@ -1,5 +1,6 @@
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card";
 import { cn } from "@/lib/utils";
+import Image from "next/image";
 
 const GithubIcon = (props: React.SVGProps<SVGSVGElement>) => (
   <svg
@@ -35,19 +36,8 @@ export default function LoginPage() {
         )}
       >
         <CardHeader className="space-y-3 pb-2 pt-8 text-center">
-          <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-indigo-500 to-violet-600 shadow-lg shadow-indigo-500/20">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              className="h-6 w-6 text-white"
-            >
-              <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
-            </svg>
+          <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-xl overflow-hidden bg-gradient-to-br from-indigo-500 to-violet-600 shadow-lg shadow-indigo-500/20">
+            <Image src={"/logo.png"} alt="Celeris Logo" height={48} width={48} />
           </div>
           <CardTitle className="text-2xl font-bold tracking-tight text-neutral-50">
             Celeris
