@@ -234,7 +234,7 @@ export function Dashboard() {
         <Button
           onClick={handleLogout}
           variant="ghost"
-          className="text-neutral-400 hover:text-white hover:bg-white/5 transition-colors"
+          className="text-neutral-400 hover:text-white hover:bg-white/5 transition-colors cursor-pointer"
         >
           <LogOut className="h-4 w-4 mr-2" />
           Logout
