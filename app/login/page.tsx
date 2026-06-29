@@ -37,7 +37,7 @@ export default function LoginPage() {
       >
         <CardHeader className="space-y-3 pb-2 pt-8 text-center">
           <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-xl overflow-hidden bg-gradient-to-br from-indigo-500 to-violet-600 shadow-lg shadow-indigo-500/20">
-            <Image src={"/logo.png"} alt="Celeris Logo" height={48} width={48} />
+            <Image src={"/logo.png"} alt="Celeris Logo" height={48} width={48} className="h-full w-full" />
           </div>
           <CardTitle className="text-2xl font-bold tracking-tight text-neutral-50">
             Celeris

@@ -259,6 +259,7 @@ export function Dashboard() {
                     alt="Celeris Logo"
                     height={36}
                     width={36}
+                    className="h-full w-full"
                   />
                 </div>
                 <div>
